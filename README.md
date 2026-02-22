@@ -5,23 +5,58 @@ EchoTrace analyzes Voice AI audio logs and renders a latency waterfall in your t
 
 Built specifically for Voice AI engineers debugging slow or inaccurate STT -> LLM -> TTS pipelines.
 
-## ⚡ Quick Start
+## 🛠️ Installation & Setup
+
+We recommend installing EchoTrace in an isolated virtual environment to prevent dependency conflicts.
 
 ```bash
-# Install the package
+# 1. Clone the repository
+git clone https://github.com/priyavratuniyal/echotrace-cli.git
+cd echotrace-cli
+
+# 2. Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+# 3. Install the package in editable mode
 pip install -e .
+```
 
-# [Optional] Generate a test audio fixture using a synthetic sine-wave or local audio
-echotrace generate-fixtures --speech-dir /path/to/flac_files --out-dir ./data/
+### ⚙️ Configuration Setup
 
-# Analyze the audio file (launches interactive TUI)
-echotrace analyze data/sample_noisy.wav
+Run the interactive setup wizard to configure your preferred metrics providers (Local/Cloud).
 
-# Or analyze with a reference gold-standard transcript
-echotrace analyze data/sample_noisy.wav --reference "I want to book a heart checkup"
+```bash
+echotrace setup
+```
+This wizard helps you specify your backend for evaluating metrics like Time To First Token (TTFT). You have the option to use Cloud API keys (e.g., Groq) or local inference with Ollama.
 
-# Headless mode (exports analysis JSON to stdout)
-echotrace analyze data/sample_noisy.wav --export-only
+#### Using Ollama (Local LLM)
+If you want completely local execution without sending data to third-parties, download [Ollama](https://ollama.com/) and follow these steps before running `echotrace setup`:
+
+```bash
+# Start your local ollama server
+ollama serve
+
+# Keep it running, and open a new terminal tab to pull your model (e.g., Llama 3)
+ollama pull llama3
+
+# Now run 'echotrace setup' and select 'ollama' when prompted!
+```
+
+## ⚡ Quick Start
+
+Once installed and configured, you are ready to profile audio pipelines!
+
+```bash
+# Analyze a single audio file (launches interactive TUI)
+echotrace analyze .extras/output/mixed/demo_voice_1_mixed_with_noise_1_snr10.wav
+
+# Analyze with a reference gold-standard transcript to precisely calculate WER
+echotrace analyze .extras/output/mixed/demo_voice_1_mixed_with_noise_1_snr10.wav --reference "I am going to cancel my credit card"
+
+# Headless mode (exports the complete analysis JSON block to stdout)
+echotrace analyze .extras/output/mixed/demo_voice_1_mixed_with_noise_1_snr10.wav --export-only
 ```
 
 ## Core Features and Interface
