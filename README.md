@@ -13,7 +13,15 @@ Built specifically for Voice AI engineers debugging slow or inaccurate STT -> LL
 
 ## 🛠️ Installation & Setup
 
-We recommend installing EchoTrace in an isolated virtual environment to prevent dependency conflicts.
+### From PyPI (Recommended)
+
+```bash
+pip install echotrace
+```
+
+### From Source
+
+For development or to get the latest unreleased changes:
 
 ```bash
 # 1. Clone the repository
