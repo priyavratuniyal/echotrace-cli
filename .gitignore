@@ -1,31 +1,57 @@
-# Core python ignores
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 .Python
-env/
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
 venv/
+env/
 .env
 
-# EchoTrace specific ignores (Separating non-required files)
-.extras/
-data/
-scripts/
-*.json
-*.log
-.DS_Store
-
-# EchoTrace output files
-echotrace_report_*.json
-
-# pytest
+# Testing
 .pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# EchoTrace specific
+.extras/
+data_test/
+tests/fixtures/real/
+tests/fixtures/audio/
+*.wav
+!echotrace/data/*.wav
+echotrace_report_*.json
+echotrace_benchmark_*.json
+
+# Config (contains API keys)
+.echotrace.toml
+~/.config/echotrace/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.whl
+*.tar.gz
 
 # mypy
 .mypy_cache/
 
-# builds
-build/
-dist/
-*.egg-info/
+# Logs
+*.log

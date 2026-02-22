@@ -1,6 +1,12 @@
 # 🎙️ EchoTrace: The Voice AI Reliability Profiler
 
-**Chrome DevTools Network Tab, but for Audio.** 
+[![CI](https://github.com/priyavratuniyal/echotrace-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/priyavratuniyal/echotrace-cli/actions/workflows/ci.yml)
+[![PyPI version](https://badge.fury.io/py/echotrace.svg)](https://badge.fury.io/py/echotrace)
+[![Python 3.10+](https://img.shields.io/pypi/pyversions/echotrace.svg)](https://pypi.org/project/echotrace/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://static.pepy.tech/badge/echotrace)](https://pepy.tech/project/echotrace)
+
+**Chrome DevTools Network Tab, but for Audio.**
 EchoTrace analyzes Voice AI audio logs and renders a latency waterfall in your terminal, allowing engineers to identify precisely which pipeline stage is creating bottlenecks or accuracy degradation.
 
 Built specifically for Voice AI engineers debugging slow or inaccurate STT -> LLM -> TTS pipelines.
