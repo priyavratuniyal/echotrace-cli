@@ -1,0 +1,67 @@
+/* EchoTrace Premium TUI Variables */
+
+$lime: #B8F818;
+$yellow: #EAB308;
+$red: #EF4444;
+
+$bg-app: #000000;
+$bg-header: #0A0A0A;
+$bg-widget: #050505;
+$bg-warning: #1A0B0B;
+
+$border: #333333;
+$border-light: #222222;
+
+$text: #FFFFFF;
+$text-dim: #F3F4F6;
+$text-muted: #9CA3AF;
+$text-subtle: #6B7280;
+
+/* Global App Layout */
+
+Screen {
+    background: $bg-app;
+}
+
+#header-bar {
+    dock: top;
+    height: 3;
+    background: $bg-header;
+    color: $text;
+    padding: 1 2;
+    text-style: bold;
+    border-bottom: solid $border-light;
+}
+
+#main-container {
+    padding: 1 2;
+}
+
+.section-title {
+    text-style: bold;
+    color: $text;
+    padding-bottom: 1;
+    border-bottom: solid $border-light;
+    margin-bottom: 1;
+}
+
+#warnings-box {
+    border: round $red;
+    background: $bg-warning;
+    margin-bottom: 2;
+    padding: 1 2;
+}
+
+#warnings-box:focus {
+    border: round $lime;
+}
+
+Footer {
+    background: $bg-header;
+    color: $text-muted;
+    border-top: solid $border-light;
+}
+
+LoadingIndicator {
+    height: 3;
+}

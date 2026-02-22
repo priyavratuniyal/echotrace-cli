@@ -1,0 +1,72 @@
+/* EchoTrace Premium TUI Variables */
+
+$lime: #B8F818;
+$yellow: #EAB308;
+$red: #EF4444;
+
+$bg-app: #000000;
+$bg-header: #0A0A0A;
+$bg-widget: #050505;
+$bg-warning: #1A0B0B;
+
+$border: #333333;
+$border-light: #222222;
+
+$text: #FFFFFF;
+$text-dim: #F3F4F6;
+$text-muted: #9CA3AF;
+$text-subtle: #6B7280;
+
+ScorecardWidget {
+    border: round $border;
+    background: $bg-widget;
+    margin-bottom: 2;
+    padding: 1 2;
+    height: auto;
+    min-height: 7;
+}
+
+ScorecardWidget:focus {
+    border: round $lime;
+}
+
+#scorecard-row {
+    height: auto;
+    min-height: 5;
+}
+
+#score-col {
+    width: 1fr;
+    min-width: 25;
+    border-right: solid $border-light;
+    padding-right: 2;
+}
+
+#quality-col {
+    width: 1fr;
+    min-width: 25;
+    border-right: solid $border-light;
+    padding: 0 2;
+}
+
+#latency-col {
+    width: 1fr;
+    min-width: 25;
+    padding-left: 2;
+}
+
+#score-box {
+    text-style: bold;
+    color: $lime;
+    height: auto;
+    min-height: 3;
+    content-align: center middle;
+    padding: 1 0;
+}
+
+MetricLabel {
+    height: auto;
+    min-height: 3;
+    padding-bottom: 1;
+    color: $text-dim;
+}

@@ -1,0 +1,1 @@
+"""EchoTrace TUI widgets package."""

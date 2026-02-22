@@ -1,0 +1,37 @@
+/* EchoTrace Premium TUI Variables */
+
+$lime: #B8F818;
+$yellow: #EAB308;
+$red: #EF4444;
+
+$bg-app: #000000;
+$bg-header: #0A0A0A;
+$bg-widget: #050505;
+$bg-warning: #1A0B0B;
+
+$border: #333333;
+$border-light: #222222;
+
+$text: #FFFFFF;
+$text-dim: #F3F4F6;
+$text-muted: #9CA3AF;
+$text-subtle: #6B7280;
+
+WaterfallWidget {
+    border: round $border;
+    background: $bg-widget;
+    margin-bottom: 2;
+    padding: 1 2;
+    height: auto;
+    min-height: 5;
+}
+
+WaterfallWidget:focus {
+    border: round $lime;
+}
+
+#waterfall-content {
+    height: auto;
+    min-height: 3;
+    color: $text-dim;
+}
